@@ -23,11 +23,11 @@
             </button>
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="index.html" title="Página inicial"><i class="bi bi-house"></i>
                             Home</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="jquery.html" title="entre em contato"><i
                                 class="bi bi-input-cursor-text"></i> JQuery</a>
                     </li>
@@ -50,7 +50,7 @@
                                                                                                   bi-input-cursor-text"></i>
                             API Dados de Países</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="localStorage.html" title="Local Storage"><i
                                 class="bi bi-input-cursor-text"></i>
                             Armazenamento Navegador</a>
@@ -64,50 +64,37 @@
                 </li>
             </ul>
         </nav>
-
-        <div class="container mt-3">
-
-            <div class="row mb-3">
-                <div class="col-md-12 col-sm-12 mb-2">
-                    <div class="alert alert-primary" role="alert" id="teste1">
-                        <p>Um texto aqui.</p>
-                    </div>
-                    <button id="esconder" class="btn btn-danger">Esconder
-                        parágrafo</button>
-                    <button id="mostrar" class="btn btn-primary">Mostrar
-                        parágrafo</button>
+        <div class="container py-5">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Cadastro de Produtos</h4>
                 </div>
-            </div>
+                <div class="card-body">
+                    <form id="formProduto" class="row g-3">
+                        <div class="col-md-5">
+                            <input type="text" id="nome" class="form-control" placeholder="Nome do produto" required>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="preco" step="0.5" class="form-control" placeholder="Preço" required>
+                        </div>
+                        <div class="col-md-3 d-grid">
+                            <button type="submit" id="salvar" class="btn btn-success">Salvar</button>
+                            <input type="hidden" id="indiceEdicao">
+                        </div>
+                    </form>
 
-            <div class="row mb-3">
-                <div class="col-md-12 col-sm-12 mb-2">
-                    <div class="alert alert-warning" role="alert" id="teste2">
-                        <p>Um texto aqui.</p>
-                    </div>
-                    <button id="alterarCSS" class="btn btn-warning">Alterar
-                        CSS</button>
-                </div>
-            </div>
+                    <hr>
 
-            <div class="row mb-3">
-                <div class="col-md-12 col-sm-12 mb-2">
-                    <div class="alert alert-success" role="alert" id="teste3">
-                        <p>Um texto aqui.</p>
-                    </div>
-                    <button id="alterarClass" class="btn btn-success">Alterar
-                        Class</button>
-                </div>
-            </div>
-
-            <div class="row mb-3">
-                <div class="col-md-12 col-sm-12 mb-2">
-                    <p>
-                        <a href="https://www.cps.sp.gov.br/" id="link" title="Centro Paula Souza" target="_blank">CPS</a>
-                    </p>
-                    <button id="alternar1" class="btn btn-danger">Alternar
-                        CPS</button>
-                    <button id="alternar2" class="btn btn-primary">Alternar
-                        Fatec</button>
+                    <table class="table table-bordered table-hover mt-3">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Nome</th>
+                                <th>Preço</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaProdutos"></tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -202,7 +189,7 @@
                 integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 
-        <script src="js/exemplos.js"></script>
+        <script src="js/localStorage.js"></script>
     </body>
 
 </html>
